@@ -41,7 +41,7 @@ export function getDiscordMessageContent(timestamp) {
                 break;
 
             case 'F':
-                message = `${dayName}, ${date} ${monthName} ${year} ${hours}:${minutes}:${seconds}`;
+                message = `${dayName}, ${date} ${monthName} ${year} ${hours}:${minutes}`;
         };
 
         const html = `<span id="d-timestamp">${message}</span>`;
