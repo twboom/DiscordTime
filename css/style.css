@@ -19,7 +19,42 @@ body {
 
 header {
     text-align: center;
+    width: 70%;
     margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a#github {
+    font-size: 0;
+    border-radius: 50%;
+}
+
+img#github-link {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+    transition: filter 0.2s, transform 0.2s;
+    transform: translateY(-.5px);
+}
+
+img#github-link:hover {
+    filter: invert(0.7);
+}
+
+img#github-link:active, img#github-link:focus {
+    outline: none;
+    transform: translateY(-.5px) scale(0.95);
+}
+
+img#github-link:focus {
+    outline: none;
 }
 
 h1.header {
@@ -99,5 +134,13 @@ output {
         --input-background-color: #313131;
         --input-background-highlight-color: #42454a;
         --outline: solid 2px #818181;
+    }
+
+    img#github-link {
+        filter: invert(0);
+    }
+
+    img#github-link:hover {
+        filter: invert(0.3);
     }
 }
