@@ -1,12 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-html, * {
-    font-family: 'Open Sans';
+:root {
+    --background-color: #dfdfdf;
+    --text-color: #000000;
+    --input-background-color: #9e9e9e;
+    --input-background-highlight-color: #42454a;
+    --outline: solid 2px #383838;
 }
 
-main {
+html, * {
+    font-family: 'Open Sans';
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+header {
+    text-align: center;
+    margin: 10px auto;
+}
+
+h1.header {
+    font-size: 64px;
+}
+
+header * {
+    margin: 0;
+}
+
+body {
     width: 50%;
     margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 2px;
 }
 
 div#input, div#result {
@@ -22,6 +52,12 @@ div.parameter {
     align-items: center;
 }
 
+input, select {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--input-background-color);
+}
+
 input, select, output {
     width: 50%;
     padding: 10px 0 ;
@@ -33,8 +69,37 @@ button {
     margin: 0;
     padding: 10px;
     width: 100%;
+    border: none;
+    border-radius: 8px;
+    transition: color 0.2s, background-color 0.2s, transform 0.2s;
+    background-color: var(--input-background-color);
+}
+
+button:hover {
+    background-color: var(--input-background-highlight-color);
+    color: white;
+}
+
+*:focus, *:focus-visible {
+    outline: var(--outline);
+    border: none;
+}
+
+button:active {
+    transform: scale(0.9);
 }
 
 output {
-    background-color: lightgray;
+    background-color: var(--input-background-color);
+    border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #202020;
+        --text-color: #e7e7e7;
+        --input-background-color: #313131;
+        --input-background-highlight-color: #42454a;
+        --outline: solid 2px #818181;
+    }
 }

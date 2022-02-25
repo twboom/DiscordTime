@@ -2,7 +2,11 @@ export function getTimeStamp(time, style) {
     time = new Date(time);
     time = Math.floor(time.getTime() / 1000)
 
-    return `<t:${time}:${style}>`
+    if (style === 'f') {
+        return `<t:${time}>`
+    } else {
+        return `<t:${time}:${style}>`
+    }
 };
 
 export function getDiscordMessageContent(timestamp) {

@@ -10,6 +10,10 @@
     <script defer type="module" src="js/app.js"></script>
 </head>
 <body>
+    <header>
+        <h1 class="header">DiscordTime</h1>
+        <p class="header">Generate timestamp for time in Discord</p>
+    </header>
     <main>
         <div id="input">
             <div class="parameter">
@@ -23,7 +27,7 @@
                     <option value="T">Long Time (16:20:00)</option>
                     <option value="d">Short Date (20/04/2021)</option>
                     <option value="D">Long Date (20 April 2021)</option>
-                    <option selected="selected" value="f">Short Date/Time (20 April 2021 16:20)</option>
+                    <option selected="selected" value="f">Short Date/Time (20 April 2021 16:20) (Default)</option>
                     <option value="F">Long Date/Time (Tuesday, 20 April 2021 16:20)</option>
                     <option value="R">Relative Time (2 months ago)</option>
                 </select>
@@ -34,7 +38,8 @@
                 <label for="output">Discord Timestamp: </label>
                 <output id="output"></output>
             </div>
-            <button id="copy">Copy to Clipboard</button>
+            <button id="copy">Copy timestamp to Clipboard</button>
+            <h1>High Tech Discord Emulator(TM)</h1>
             <div id="discord">
                 <div id="d-left">
                     <img src="assets/icon.png" alt="Discord preview profile picture" id="d-profile-picture">

@@ -5,10 +5,22 @@ const style = document.getElementById('style');
 const output = document.getElementById('output');
 const preview = document.getElementById('d-message-content');
 
+const session = {};
+
 function handleInput() {
     const timeStamp = getTimeStamp(datetime.value, style.value);
+    session.timeStamp = timeStamp;
     output.innerText = timeStamp
     preview.innerHTML = getDiscordMessageContent(timeStamp);
+};
+
+function copyToClipbord() {
+    if (!navigator.clipboard) {
+        return
+    };
+
+    navigator.clipboard.writeText(session.timeStamp)
+        .then(_ => { console.log('Copied to clipboard') }, err => { console.error('Could not copy to clipboard', err) });
 };
 
 // Main function
@@ -26,6 +38,8 @@ function main() {
     datetime.addEventListener('input', handleInput);
     style.addEventListener('input', handleInput);
     handleInput();
+
+    document.getElementById('copy').addEventListener('click', copyToClipbord);
 };
 
 main();

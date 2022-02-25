@@ -4,7 +4,7 @@
     --discord-text-hightlight: #42454a;
     --discord-name: white;
     --discord-text: #e7e7e7;
-    --discord-text-sublte: #72767d;
+    --discord-text-subtle: #72767d;
 }
 
 div#discord {
@@ -14,10 +14,20 @@ div#discord {
     background-color: var(--discord-background-light);
     border-radius: 8px;
     color: var(--discord-name);
-};
+}
 
 div#d-left {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img#d-profile-picture {
+    width: 64px;
     height: 64px;
+    margin-top: 6px;
 }
 
 div#d-right {
@@ -34,17 +44,19 @@ div#d-info {
 p#d-username {
     font-weight: bolder;
     margin: 0 8px 0 0;
+    color: var(--discord-name);
 }
 
-p#d-time {
+p#d-time, span#d-time-component {
     text-align: center;
     font-size: smaller;
     margin: 0;
-    color: var(--discord-text-sublte)
+    color: var(--discord-text-subtle)
 }
 
 div#d-message {
     margin: 0;
+    margin-top: 2px;
 }
 
 div#d-message p {
@@ -54,13 +66,10 @@ div#d-message p {
 
 span#d-timestamp {
     background-color: var(--discord-text-hightlight);
+    color: var(--discord-text);
     padding: 2px 4px;
     border-radius: 4px;
 }
 
-img#d-profile-picture {
-    width: 64px;
-    height: 64px;
-}
 
 
