@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiscordTime</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/discord.css">
+    <script defer type="module" src="js/app.js"></script>
+</head>
+<body>
+    <main>
+        <div id="input">
+            <div class="parameter">
+                <label for="datetime">Enter the date:</label>
+                <input type="datetime-local" name="datetime" id="datetime" step="1">
+            </div>
+            <div class="parameter">
+                <label for="style">Choose your style:</label>
+                <select name="style" id="style">
+                    <option value="t">Short Time (16:20)</option>
+                    <option value="T">Long Time (16:20:00)</option>
+                    <option value="d">Short Date (20/04/2021)</option>
+                    <option value="D">Long Date (20 April 2021)</option>
+                    <option selected="selected" value="f">Short Date/Time (20 April 2021 16:20)</option>
+                    <option value="F">Long Date/Time (Tuesday, 20 April 2021 16:20)</option>
+                    <option value="R">Relative Time (2 months ago)</option>
+                </select>
+            </div>
+        </div>
+        <div id="result">
+            <div class="parameter">
+                <label for="output">Discord Timestamp: </label>
+                <output id="output"></output>
+            </div>
+            <button id="copy">Copy to Clipboard</button>
+            <div id="discord">
+                <div id="d-left">
+                    <img src="assets/icon.png" alt="Discord preview profile picture" id="d-profile-picture">
+                </div>
+                <div id="d-right">
+                    <div id="d-info">
+                        <p id="d-username">Thijs</p>
+                        <p id="d-time">Today at <span id="d-time-component">11:05</span></p>
+                    </div>
+                    <div id="d-message">
+                        <p id="d-message-content">Message here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
