@@ -15,7 +15,7 @@
         <p class="header">Generate timestamp for time in Discord</p>
     </header>
     <main>
-        <div id="input">
+        <section id="input">
             <div class="parameter">
                 <label for="datetime">Enter the date:</label>
                 <input type="datetime-local" name="datetime" id="datetime" step="1">
@@ -32,8 +32,8 @@
                     <option value="R">Relative Time (2 months ago)</option>
                 </select>
             </div>
-        </div>
-        <div id="result">
+        </section>
+        <section id="result">
             <div class="parameter">
                 <label for="output">Discord Timestamp: </label>
                 <output id="output"></output>
@@ -54,7 +54,19 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section>
+            <h1>What is this?</h1>
+            <p>
+                Almost a year ago, Discord released a feature that allowed users to send a timestamp that would render the local time in the message. 
+                An example use case for this is in announcements, where you want to send a message that contains a time (e.g. "The meeting will be at 12:00"). 
+                With the timestamps, everybody sees the time in their local timezone.
+            </p>
+            <p>
+                <a href="https://discord.com/developers/docs/reference#message-formatting-formats">Here</a> is the official documentation about this. 
+                More information can be found there.
+            </p>
+        </section>
     </main>
 </body>
 </html>

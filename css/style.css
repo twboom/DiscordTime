@@ -39,9 +39,7 @@ h1 {
     margin-bottom: 2px;
 }
 
-div#input, div#result {
-    display: flex;
-    flex-direction: column;
+section {
     width: 70%;
     margin: 0 auto;
 }
