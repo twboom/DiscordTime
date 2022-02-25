@@ -28,6 +28,7 @@ img#d-profile-picture {
     width: 64px;
     height: 64px;
     margin-top: 6px;
+    transform: scale(.85);
 }
 
 div#d-right {
