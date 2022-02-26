@@ -15,14 +15,16 @@ html, * {
 
 body {
     background-color: var(--background-color);
+    margin: 0 auto;
 }
 
 header {
     text-align: center;
-    width: 70%;
+    width: 35%;
     margin: 10px auto;
     display: flex;
     justify-content: space-between;
+    min-width: 550px;
 }
 
 div.header-section {
@@ -65,18 +67,19 @@ header * {
     margin: 0;
 }
 
-body {
-    width: 50%;
-    margin: 0 auto;
-}
-
 h1 {
     margin-bottom: 2px;
+    font-size: 24px;
 }
 
 section {
-    width: 70%;
+    width: 35%;
     margin: 0 auto;
+}
+
+section#about {
+    /* width: 70%; */
+    margin-top: 64px;
 }
 
 div.parameter {
@@ -143,4 +146,29 @@ output {
     img#github-link:hover {
         filter: invert(0.3);
     }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        width: 90%;
+    }
+
+    header {
+        width: 100%;
+        min-width: fit-content;
+    }
+
+    section {
+        width: 95%;
+    }
+
+    section#about {
+        margin-top: 0;
+        width: 95%;
+    }
+
+    h1.header {
+        font-size: 32px;
+    }
+    
 }

@@ -72,5 +72,11 @@ span#d-timestamp {
     border-radius: 4px;
 }
 
-
-
+@media screen and (max-width: 900px) {
+    
+    div#discord {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+}
